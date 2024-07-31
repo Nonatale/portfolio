@@ -1,0 +1,211 @@
+:root {
+    --backgroundcolor: #faf9f7;
+    --fontcolor: #414141;
+    --fonttype: "Lato", sans-serif;
+    --headerfontweight: 700;
+    --regularfontweight: 400;
+    --profilesize: 60px;
+}
+
+* {
+    font-family: var(--fonttype);  
+    padding: 0;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    flex-wrap: nowrap;
+    background-color: var(--backgroundcolor);
+    height: 100%;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    width: 120px;
+    margin-top: 25px;
+}
+
+h1 {
+    font-weight: var(--headerfontweight);
+    font-size: 50px;
+    color: #525252;
+    margin: 0;
+}
+
+h3 {
+    color: var(--fontcolor);
+    text-decoration: none;
+    font-style: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    width: 60%;
+}
+
+nav a {
+    font-style: none;
+    color: var(--fontcolor);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-bottom: #a8a69f solid;
+}
+
+.rotate-text {
+    transform: rotate(-90deg); /* Rotates the text block 90 degrees clockwise */
+    transform-origin: center; /* Sets the origin for the rotation */
+    white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 180px;
+}
+
+.social {
+    height: 25px;
+    width: 25px;
+}
+
+.page-wrapper {
+    padding-left: 80px;
+    padding-right: 200px;
+    background-color: #faf9f7;
+    height: 100%;
+}
+
+.page-section {
+    padding-bottom: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    row-gap: 35px;
+}
+
+.flex-item {
+    width: 200px;
+    height: 200px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+}
+
+.run-buddy {
+    background-image: url("../img/Project1.jpg");
+    background-size: cover;
+}
+  
+.led-wall {
+    background-image: url("../img/Project2.jpg");
+    background-size: cover;
+}
+
+.react-calc {
+    background-image: url("../img/Project3.jpg");
+    background-size: cover;
+}
+
+.pastel-puzzles {
+    background-image: url("../img/Project4.jpg");
+    background-size: cover;
+}
+
+.surf-report {
+    background-image: url("../img/Project5.jpg");
+    background-size: cover;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 35vh;
+    width: 100%;
+}
+
+#profileimg {
+    height: var(--profilesize);
+    width: var(--profilesize);
+    border: #525252 dashed;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+      display: block;
+    }
+
+    aside {
+        height: auto;
+        width: 50%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    #profile {
+        height: auto;
+    }
+
+    nav {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .page-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer {
+        display: flex;
+        height: auto;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .footer a {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .rotate-text {
+        transform: rotate(0);
+    }
+  }
