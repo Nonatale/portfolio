@@ -1,10 +1,11 @@
 :root {
     --backgroundcolor: #faf9f7;
-    --fontcolor: #414141;
+    --fontcolor: #7F7F7F;
     --fonttype: "Lato", sans-serif;
     --headerfontweight: 700;
     --regularfontweight: 400;
-    --profilesize: 60px;
+    --profilesize: 100px;
+    --asideWidth: 190px;
 }
 
 * {
@@ -21,12 +22,13 @@ body {
 }
 
 aside {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 90vh;
-    width: 120px;
+    width: var(--asideWidth);
     margin-top: 25px;
 }
 
@@ -37,6 +39,10 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    margin-top: 0;
+}
+
 h3 {
     color: var(--fontcolor);
     text-decoration: none;
@@ -45,9 +51,10 @@ h3 {
 
 nav {
     display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    width: 60%;
+    flex-direction: column;
+    right: 50px;
+    margin-top: 85px;
+    gap: 15px;
 }
 
 nav a {
@@ -58,12 +65,7 @@ nav a {
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    border-bottom: #a8a69f solid;
+    height: 85px;
 }
 
 .rotate-text {
@@ -85,14 +87,15 @@ header {
 }
 
 .page-wrapper {
-    padding-left: 80px;
-    padding-right: 200px;
+    padding-left: var(--asideWidth);
+    padding-right: var(--asideWidth);
     background-color: #faf9f7;
     height: 100%;
 }
 
 .page-section {
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 40px;
 }
 
 .flex-container {
@@ -158,7 +161,6 @@ header {
 #profileimg {
     height: var(--profilesize);
     width: var(--profilesize);
-    border: #525252 dashed;
 }
 
 @media screen and (max-width: 768px) {
